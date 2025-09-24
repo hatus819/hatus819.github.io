@@ -67,14 +67,17 @@
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-        .parallax-section {
-            perspective: 1px;
-            overflow-x: hidden;
-            overflow-y: auto;
+        .neon-teal-pulse {
+            animation: neon-teal-pulse 2.5s infinite alternate;
+            color: #2DD4BF; /* Teal 400 */
         }
-        .parallax-content {
-            will-change: transform;
-            transition: transform 0.2s ease-out;
+        @keyframes neon-teal-pulse {
+            from {
+                text-shadow: 0 0 4px #2DD4BF;
+            }
+            to {
+                text-shadow: 0 0 8px #2DD4BF, 0 0 12px #2DD4BF;
+            }
         }
     </style>
 </head>
@@ -92,15 +95,15 @@
     </header>
 
     <main class="container mx-auto px-6">
-        <section id="visao" class="text-center py-20 md:py-28 parallax-section">
-            <div class="parallax-content">
+        <section id="visao" class="text-center py-20 md:py-28">
+            <div>
                 <h2 class="text-4xl md:text-5xl font-bold text-lightest-slate leading-tight">Seu analista financeiro pessoal no bolso.</h2>
                 <p class="mt-4 text-lg text-light-slate max-w-3xl mx-auto">O Grana.AI não apenas mostra onde seu dinheiro foi gasto. Nós usamos inteligência artificial para prever seu futuro financeiro e prescrever as melhores ações para você realizar seus sonhos.</p>
             </div>
         </section>
 
-        <section id="problema" class="py-20 md:py-28 parallax-section">
-            <div class="parallax-content">
+        <section id="problema" class="py-20 md:py-28">
+            <div>
                 <div class="text-center mb-12">
                     <h3 class="text-3xl font-bold text-lightest-slate">O Problema e a Oportunidade</h3>
                     <p class="mt-2 text-light-slate max-w-2xl mx-auto">Partimos de um dado alarmante: a grande maioria dos brasileiros não tem controle sobre suas finanças, criando um mercado de R$ 15 bilhões para soluções inteligentes.</p>
@@ -144,8 +147,8 @@
             </div>
         </section>
 
-        <section id="tecnologia" class="py-20 md:py-28 parallax-section">
-             <div class="parallax-content bg-light-slate p-8 md:p-12 rounded-2xl">
+        <section id="tecnologia" class="py-20 md:py-28">
+             <div class="bg-light-slate p-8 md:p-12 rounded-2xl">
                 <div class="text-center mb-12">
                     <h3 class="text-3xl font-bold text-lightest-slate">Como Funciona a Nossa Tecnologia</h3>
                     <p class="mt-2 text-light-slate max-w-2xl mx-auto">Nossa inteligência não é mágica, é ciência de dados. Nosso motor de IA é alimentado de forma segura e contínua por três pilares de dados.</p>
@@ -182,8 +185,8 @@
             </div>
         </section>
 
-        <section id="funcionalidades" class="py-20 md:py-28 parallax-section">
-            <div class="parallax-content">
+        <section id="funcionalidades" class="py-20 md:py-28">
+            <div>
                 <div class="text-center mb-12">
                     <h3 class="text-3xl font-bold text-lightest-slate">O Produto em Ação</h3>
                     <p class="mt-2 text-light-slate max-w-2xl mx-auto">Explore nossas funcionalidades chave e veja como transformamos dados em ações concretas para a sua vida financeira.</p>
@@ -191,9 +194,9 @@
                 <div class="border-b border-gray-700 mb-8">
                     <nav class="flex flex-wrap -mb-px justify-center" id="tabs-nav">
                         <button data-tab="preditiva" class="tab-btn tab-active py-4 px-6 block hover:accent-green focus:outline-none border-b-2 font-medium">Análise Preditiva</button>
-                        <button data-tab="bucketlist" class="tab-btn text-light-slate py-4 px-6 block hover:accent-green focus:outline-none border-b-2 font-medium border-transparent">Bucket List Inteligente</button>
+                        <button data-tab="bucketlist" class="tab-btn text-light-slate py-4 px-6 block hover:accent-green focus:outline-none border-b-2 font-medium border-transparent neon-teal-pulse">Bucket List Inteligente</button>
                         <button data-tab="gamificacao" class="tab-btn text-light-slate py-4 px-6 block hover:accent-green focus:outline-none border-b-2 font-medium border-transparent">Gamificação</button>
-                        <button data-tab="educador" class="tab-btn text-light-slate py-4 px-6 block hover:accent-green focus:outline-none border-b-2 font-medium border-transparent">Educador Financeiro ✨</button>
+                        <button data-tab="educador" class="tab-btn text-light-slate py-4 px-6 block hover:accent-green focus:outline-none border-b-2 font-medium border-transparent neon-teal-pulse">Educador Financeiro ✨</button>
                     </nav>
                 </div>
                 <div id="tabs-content">
@@ -279,8 +282,8 @@
             </div>
         </section>
 
-        <section id="modelo" class="py-20 md:py-28 parallax-section">
-            <div class="parallax-content bg-light-slate p-8 md:p-12 rounded-2xl">
+        <section id="modelo" class="py-20 md:py-28">
+            <div class="bg-light-slate p-8 md:p-12 rounded-2xl">
                 <div class="text-center mb-12">
                     <h3 class="text-3xl font-bold text-lightest-slate">Nosso Modelo de Negócio</h3>
                     <p class="mt-2 text-light-slate max-w-2xl mx-auto">Nossa receita virá de uma combinação estratégica de assinaturas diretas, comissões por recomendações e, a longo prazo, licenciamento de tecnologia.</p>
@@ -319,8 +322,8 @@
             </div>
         </section>
 
-        <section id="roadmap" class="py-20 md:py-28 parallax-section">
-            <div class="parallax-content">
+        <section id="roadmap" class="py-20 md:py-28">
+            <div>
                 <div class="text-center mb-16">
                     <h3 class="text-3xl font-bold text-lightest-slate">Roadmap Estratégico</h3>
                     <p class="mt-2 text-light-slate max-w-2xl mx-auto">Nossa estratégia é dividida em fases claras: conquistar, monetizar e dominar.</p>
@@ -492,22 +495,6 @@
                     document.getElementById(`phase-${phaseId}`).classList.remove('hidden');
                 }
             });
-            
-            const parallaxElements = document.querySelectorAll('.parallax-content');
-            function applyParallax() {
-                const top = window.pageYOffset;
-                parallaxElements.forEach(el => {
-                    const speed = 0.2;
-                    const yPos = -(top * speed);
-                    const sectionTop = el.parentElement.offsetTop;
-                    const relativeY = -( (top - sectionTop) * speed);
-                    el.style.transform = `translateY(${relativeY}px)`;
-                });
-            }
-            window.addEventListener('scroll', () => {
-                window.requestAnimationFrame(applyParallax);
-            });
-
 
             async function callGeminiAPI(prompt, outputElement, loaderElement) {
                 loaderElement.style.display = 'flex';
